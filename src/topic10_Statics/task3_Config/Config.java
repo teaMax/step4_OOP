@@ -1,7 +1,7 @@
 package topic10_Statics.task3_Config;
 
 public class Config {
-    private static String configVersion;
+    private static final String configVersion;
 
     static
     {

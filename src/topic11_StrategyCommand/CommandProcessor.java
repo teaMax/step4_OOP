@@ -2,6 +2,7 @@ package topic11_StrategyCommand;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class CommandProcessor {
     static Map<String, Command> commandMap = new HashMap<>();
@@ -16,4 +17,12 @@ public class CommandProcessor {
         new CommandProcessor();
         return commandMap.get(key);
     }
+
+    public static String getCommandFromScanner() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите одну из комманд start, pause, stop: ");
+        String command = scanner.nextLine();
+        return command;
+    }
+
 }
