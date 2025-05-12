@@ -1,22 +1,22 @@
 package topic3_Book;
 
 public class Book {
-    private String name;
-    private String author;
-    private  int year;
+    private final String title;
+    private final String author;
+    private final int year;
 
-    public Book(String name, String author,int year) {
-        this.name = name;
+    public Book(String title, String author,int year) {
+        this.title = title;
         this.author = author;
         this.year = year;
     }
 
     @Override
     public String toString() {
-        return "Book{" +
-                "name='" + name + '\'' +
-                ", author='" + author + '\'' +
-                ", year=" + year +
-                '}';
+        return "Book: " +
+                title +
+                " by " + author +
+                " (" + year +
+                ')';
     }
 }

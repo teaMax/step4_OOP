@@ -1,7 +1,7 @@
 package topic7_Shapes;
 
 public class Cicle extends Shape{
-    private double radius;
+    private final double radius;
 
     public Cicle(double radius) {
         this.radius = radius;

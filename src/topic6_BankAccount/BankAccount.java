@@ -1,7 +1,7 @@
 package topic6_BankAccount;
 
 public class BankAccount {
-    private String accountNumber;
+    private final String accountNumber;
     private double balance;
 
     public BankAccount(String accountNumber, double balance) {
@@ -10,15 +10,15 @@ public class BankAccount {
     }
 
     public void deposit(double amount) {
-        balance += amount;
+        if(amount < 0) {
+            System.out.println("Невозможно положить: " + amount);
+        } else balance += amount;
     }
 
     public void withdraw(double amount) {
         if(amount > balance) {
             System.out.println("Недостаточно средств");
-            return;
-        }
-        balance -= amount;
+        } else  balance -= amount;
     }
 
     public double getBalance() {
