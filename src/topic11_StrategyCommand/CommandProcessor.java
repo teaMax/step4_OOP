@@ -25,4 +25,8 @@ public class CommandProcessor {
         return command;
     }
 
+    public static void commandExecute(){
+        String command = CommandProcessor.getCommandFromScanner();
+        CommandProcessor.getCommandByKey(command).execute();
+    }
 }
